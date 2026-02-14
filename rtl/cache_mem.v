@@ -1,5 +1,7 @@
 module cache_mem(addr,wr,rd,w_data,r_data,clk,rst);
-input clk,rst,wr,rd;
+input rst;
+input wr;
+input rd; 
 input [2:0] addr;
 input [7:0] w_data;
 output reg [7:0] r_data;
@@ -20,4 +22,5 @@ else begin
 	if (rd) r_data <= mem[addr];
 end end
 endmodule
+
 
